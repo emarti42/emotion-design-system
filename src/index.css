@@ -30,6 +30,9 @@
   }
 }
 
+/* Import design system color tokens */
+@import './styles/colors.css';
+
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #9ca3af;

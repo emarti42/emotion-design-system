@@ -1,0 +1,112 @@
+/* Design System Color Tokens — Modern palette
+   - Use BEM-friendly semantic tokens.
+   - Import this file from src/index.css.
+*/
+:root {
+  /* Neutral scale */
+  --n-0: #ffffff;
+  --n-50: #f8fafc;
+  --n-100: #f1f5f9;
+  --n-200: #e2e8f0;
+  --n-300: #cbd5e1;
+  --n-400: #94a3b8;
+  --n-500: #64748b;
+  --n-600: #475569;
+  --n-700: #334155;
+  --n-800: #1f2933;
+  --n-900: #0b1220;
+
+  /* Primary (brand) */
+  --primary-50: #eef2ff;
+  --primary-100: #e0e7ff;
+  --primary-200: #c7d2fe;
+  --primary-300: #a5b4fc;
+  --primary-400: #7c3aed;
+  --primary-500: #5b21b6;
+  --primary-600: #4c1d95;
+  --primary-700: #3b166d;
+
+  /* Secondary */
+  --secondary-50: #fdf2f8;
+  --secondary-100: #fce7f3;
+  --secondary-300: #f9a8d4;
+  --secondary-500: #ec4899;
+
+  /* Accent / interactive */
+  --accent-50: #effaf9;
+  --accent-300: #34d399;
+  --accent-500: #059669;
+
+  /* Feedback */
+  --success-500: #10b981;
+  --warning-500: #f59e0b;
+  --danger-500: #ef4444;
+
+  /* Surfaces */
+  --surface-0: var(--n-0);
+  --surface-1: var(--n-50);
+  --surface-2: var(--n-100);
+  --surface-3: var(--n-200);
+
+  /* Text */
+  --text-primary: var(--n-900);
+  --text-secondary: var(--n-600);
+  --text-muted: var(--n-400);
+
+  /* Borders & elevation */
+  --border-default: var(--n-200);
+  --shadow-1: 0 1px 2px rgba(12, 18, 31, 0.04);
+  --shadow-2: 0 6px 18px rgba(12, 18, 31, 0.08);
+
+  /* Focus / accessibility */
+  --focus-ring: rgba(59, 33, 182, 0.25); /* semi-transparent brand */
+
+  /* Semantic aliases (use these in components) */
+  --color-bg: var(--surface-0);
+  --color-surface: var(--surface-1);
+  --color-primary: var(--primary-500);
+  --color-primary-weak: var(--primary-200);
+  --color-secondary: var(--secondary-500);
+  --color-accent: var(--accent-500);
+  --color-success: var(--success-500);
+  --color-warning: var(--warning-500);
+  --color-danger: var(--danger-500);
+  --color-text: var(--text-primary);
+  --color-text-muted: var(--text-secondary);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --n-0: #0b1220;
+    --n-50: #0f1724;
+    --n-100: #111827;
+    --n-200: #0b1320;
+    --n-300: #1f2933;
+    --n-400: #334155;
+    --n-500: #64748b;
+    --n-600: #94a3b8;
+    --n-700: #cbd5e1;
+    --n-900: #ffffff;
+
+    --primary-500: #a78bfa;
+    --accent-500: #34d399;
+
+    --surface-0: var(--n-0);
+    --surface-1: #0f1724;
+    --color-bg: var(--surface-0);
+    --color-surface: var(--surface-1);
+
+    --color-text: var(--n-900);
+    --color-text-muted: var(--n-500);
+
+    --border-default: rgba(255,255,255,0.06);
+    --shadow-1: 0 1px 2px rgba(2,6,23,0.6);
+    --shadow-2: 0 8px 24px rgba(2,6,23,0.6);
+    --focus-ring: rgba(167,139,250,0.14);
+  }
+}
+
+/* Usage notes:
+ - Prefer semantic aliases like --color-primary and --color-surface in components.
+ - Keep tokens immutable; create component modifiers for exceptions (BEM modifiers).
+*/
