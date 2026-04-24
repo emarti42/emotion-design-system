@@ -4,36 +4,35 @@
   border-radius: 5px;
   color: var(--accent);
   background: var(--accent-bg);
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-  margin-bottom: 24px;
+    font-size: var(--font-size-md);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    color: var(--accent);
+    background: var(--accent-bg);
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+    margin-bottom: var(--spacing-lg);
 
-  &:hover {
-    border-color: var(--accent-border);
-  }
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
-}
-
-.hero {
-  position: relative;
-
+    &:hover {
+      border-color: var(--accent-border);
+    }
+    &:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
   .base,
   .framework,
   .vite {
     inset-inline: 0;
     margin: 0 auto;
   }
-
+    gap: var(--spacing-md);
   .base {
     width: 170px;
     position: relative;
     z-index: 0;
   }
-
-  .framework,
+      padding: var(--spacing-lg) 20px 24px;
+      gap: var(--spacing-sm);
   .vite {
     position: absolute;
   }
@@ -43,10 +42,10 @@
     top: 34px;
     height: 28px;
     transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
-      scale(1.4);
-  }
+      flex: 1 1 0;
+      padding: var(--spacing-lg);
 
-  .vite {
+        padding: var(--spacing-md) 20px;
     z-index: 0;
     top: 107px;
     height: 26px;
@@ -75,8 +74,8 @@
   border-top: 1px solid var(--border);
   text-align: left;
 
-  & > div {
-    flex: 1 1 0;
+    gap: var(--spacing-xs);
+    margin: var(--spacing-md) 0 0;
     padding: 32px;
     @media (max-width: 1024px) {
       padding: 24px 20px;
@@ -84,8 +83,8 @@
   }
 
   .icon {
-    margin-bottom: 16px;
-    width: 22px;
+      font-size: var(--font-size-md);
+      border-radius: var(--border-radius-sm);
     height: 22px;
   }
 
@@ -121,7 +120,7 @@
     border-radius: 6px;
     background: var(--social-bg);
     display: flex;
-    padding: 6px 12px;
+    height: 88px;
     align-items: center;
     gap: 8px;
     text-decoration: none;
@@ -181,4 +180,12 @@
     right: 0;
     border-right-color: var(--border);
   }
+}
+
+.app__actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--spacing-md);
 }

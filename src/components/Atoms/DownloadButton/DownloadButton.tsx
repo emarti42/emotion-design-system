@@ -6,6 +6,7 @@ type DownloadButtonProps = {
   filename?: string
   label?: string
   className?: string
+  variant?: 'primary' | 'secondary' | 'ghost'
 }
 
 export default function DownloadButton({
@@ -13,10 +14,11 @@ export default function DownloadButton({
   filename,
   label = 'Download',
   className = '',
+  variant = 'primary',
 }: DownloadButtonProps) {
   return (
     <a
-      className={`download-button ${className}`}
+      className={`download-button download-button--${variant} ${className}`}
       href={fileUrl}
       download={filename}
       aria-label={label}
@@ -39,3 +41,4 @@ export default function DownloadButton({
     </a>
   )
 }
+

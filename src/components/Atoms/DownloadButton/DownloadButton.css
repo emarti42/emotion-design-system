@@ -1,13 +1,13 @@
 .download-button {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 14px;
-  border-radius: 8px;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
   text-decoration: none;
   color: var(--n-0);
   background: var(--color-primary);
-  font-weight: 600;
+  font-weight: var(--font-weight-medium);
   box-shadow: var(--shadow-1);
   border: 1px solid transparent;
   transition: transform 120ms ease, box-shadow 120ms ease;
@@ -39,4 +39,16 @@
   background: transparent;
   color: var(--color-primary);
   border-color: var(--border-default);
+}
+
+.download-button--secondary {
+  background: var(--color-primary-weak);
+  color: var(--color-primary-dark);
+  border: 1px solid transparent;
+}
+
+.download-button--primary {
+  /* explicit primary modifier keeps previous defaults in case "primary" class is applied */
+  background: var(--color-primary);
+  color: var(--n-0);
 }
