@@ -189,3 +189,20 @@
   align-items: center;
   margin-top: var(--spacing-md);
 }
+
+/* Center the app content so the Card sits centered */
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-lg) 16px;
+}
+
+.cards-grid {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-md);
+}
