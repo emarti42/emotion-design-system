@@ -1,0 +1,50 @@
+.about {
+  width: 100%;
+  max-width: 1126px;
+  margin: 0 0 var(--spacing-md);
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  width: auto;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-full);
+  background: var(--color-surface);
+  color: var(--color-text-strong);
+  border: 1px solid var(--border-default);
+  cursor: pointer;
+  font-weight: var(--font-weight-medium);
+}
+
+.about__button:focus {
+  outline: none;
+  box-shadow: 0 0 0 6px var(--focus-ring);
+}
+
+.about__chev {
+  color: var(--color-text-body);
+}
+
+.about__panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 260ms ease;
+}
+
+.about__panel--open {
+  margin-top: var(--spacing-sm);
+}
+
+.about__text {
+  margin: 0;
+  padding: var(--spacing-sm) 0;
+  color: var(--color-text);
+  font-size: var(--font-size-md);
+}

@@ -90,6 +90,29 @@
   }
 }
 
+/* Explicit theme overrides when user chooses theme via JS
+   These take precedence when `data-theme` is set on <html> (documentElement)
+*/
+:root[data-theme='dark'] {
+  --color-bg-main: #0b1220;
+  --color-bg-card: #0f1724;
+  --color-text-header: #f9fafb;
+  --color-text-body: #94a3b8;
+  --color-border: rgba(255,255,255,0.06);
+  --border-default: rgba(255,255,255,0.06);
+  --focus-ring: rgba(16,185,129,0.12);
+}
+
+:root[data-theme='light'] {
+  --color-bg-main: #f9fafb;
+  --color-bg-card: #ffffff;
+  --color-text-header: #111827;
+  --color-text-body: #6b7280;
+  --color-border: #e5e7eb;
+  --border-default: #e5e7eb;
+  --focus-ring: rgba(16,185,129,0.18);
+}
+
 /* --- Example utility usage (keep in design system docs, avoid using ad-hoc classes in components) */
 .card {
   background-color: var(--color-bg-card);

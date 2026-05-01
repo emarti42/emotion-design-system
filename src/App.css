@@ -206,3 +206,24 @@
   align-items: flex-start;
   margin-bottom: var(--spacing-md);
 }
+
+.app__header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app__toggle {
+  position: absolute;
+  right: var(--spacing-lg);
+  top: var(--spacing-sm);
+}
+
+@media (max-width: 480px) {
+  .app__toggle {
+    right: var(--spacing-sm);
+    top: var(--spacing-sm);
+  }
+}

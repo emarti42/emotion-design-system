@@ -2,39 +2,52 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import DownloadButton from './components/Atoms/DownloadButton/DownloadButton'
 import Card from './components/Molecules/Card/Card'
+import ThemeToggle from './components/Atoms/ThemeToggle/ThemeToggle'
+import Accordion from './components/Organisms/Accordion/Accordion'
+import Nav from './components/Organisms/Nav/Nav'
+import About from './components/Molecules/About/About'
 
 function App() {
   return (
     <main className="app">
-      <h1 className="app__title">Emotion Design System</h1>
+      <header className="app__header">
+        <h1 className="app__title">Emotion Design System</h1>
+        <div className="app__toggle">
+          <ThemeToggle />
+        </div>
+      </header>
+      <Nav />
+      <About />
+
       <p className="app__lead">Example: download an asset using the design tokens</p>
-      <section className="cards-grid">
-        {/* Card variant: no image (has button) */}
-        <Card
-          title="No image card"
-          description="This card has no image but includes the action button."
-          fileUrl={heroImg}
-          filename="hero.png"
-        />
 
-        {/* Card variant: no button (shows image only) */}
-        <Card
-          title="No button card"
-          description="This card shows an image but hides the action button."
-          // pass imageUrl to show image
-          imageUrl={heroImg}
-          fileUrl={heroImg}
-          filename="hero.png"
-          showAction={false}
-        />
-
-        {/* Card variant: text-only */}
-        <Card
-          title="Text only card"
-          description="A simple text-only card without image or action."
-          showAction={false}
-        />
-      </section>
+      <Accordion
+        items={[
+          {
+            id: 'no-image',
+            title: 'No image card',
+            description: 'This card has no image but includes the action button.',
+            fileUrl: heroImg,
+            filename: 'hero.png',
+            showAction: true,
+          },
+          {
+            id: 'no-button',
+            title: 'No button card',
+            description: 'This card shows an image but hides the action button.',
+            imageUrl: heroImg,
+            fileUrl: heroImg,
+            filename: 'hero.png',
+            showAction: false,
+          },
+          {
+            id: 'text-only',
+            title: 'Text only card',
+            description: 'A simple text-only card without image or action.',
+            showAction: false,
+          },
+        ]}
+      />
 
       <div className="app__actions">
         <DownloadButton fileUrl={heroImg} filename="hero.png" label="Download (Primary)" variant="primary" />

@@ -1,0 +1,55 @@
+.accordion {
+  width: 100%;
+  max-width: 1080px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.accordion__item {
+  width: 100%;
+}
+
+.accordion__header {
+  display: flex;
+}
+
+.accordion__button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: transparent;
+  border: 1px solid var(--border-default);
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-md);
+  color: var(--color-text-strong);
+  cursor: pointer;
+}
+
+.accordion__button:focus {
+  outline: none;
+  box-shadow: 0 0 0 6px var(--focus-ring);
+}
+
+.accordion__title {
+  font-weight: var(--font-weight-medium);
+}
+
+.accordion__chev {
+  font-size: 14px;
+  color: var(--color-text-body);
+}
+
+.accordion__panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 260ms ease, padding 180ms ease;
+}
+
+.accordion__panel--open {
+  max-height: 1000px; /* large enough for content */
+  padding-top: var(--spacing-sm);
+}
