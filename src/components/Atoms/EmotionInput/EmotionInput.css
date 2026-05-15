@@ -1,0 +1,50 @@
+.emotion-input {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.emotion-input__label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-strong);
+  font-weight: var(--font-weight-medium);
+}
+
+.emotion-input__control {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--border-default);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: var(--font-size-md);
+  transition: box-shadow 120ms ease, border-color 120ms ease, opacity 120ms ease;
+}
+
+.emotion-input__control:focus {
+  outline: none;
+  box-shadow: 0 0 0 6px var(--focus-ring);
+  border-color: var(--color-primary);
+}
+
+/* Error state — red border and error message */
+.emotion-input--error .emotion-input__control {
+  border-color: var(--color-danger);
+}
+
+.emotion-input__error {
+  color: var(--color-danger);
+  font-size: var(--font-size-sm);
+  margin-top: calc(var(--spacing-xs) / 2);
+}
+
+/* Success state — green border */
+.emotion-input--success .emotion-input__control {
+  border-color: var(--color-success);
+}
+
+/* Disabled visual */
+.emotion-input__control:disabled,
+.emotion-input--disabled .emotion-input__control {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

@@ -18,7 +18,8 @@ type AccordionProps = {
 
 // Organism: composes Card molecules and provides interactive behavior.
 export default function Accordion({ items }: AccordionProps) {
-  const [openId, setOpenId] = useState<string | null>(items.length ? items[0].id : null)
+  // Start closed by default: no panel is open on initial render
+  const [openId, setOpenId] = useState<string | null>(null)
 
   const toggle = (id: string) => {
     setOpenId((current) => (current === id ? null : id))

@@ -6,6 +6,7 @@ type DownloadButtonProps = {
   label?: string
   className?: string
   variant?: 'primary' | 'secondary' | 'ghost'
+  disabled?: boolean
 }
 
 export default function DownloadButton({
@@ -14,13 +15,19 @@ export default function DownloadButton({
   label = 'Download',
   className = '',
   variant = 'primary',
+  disabled = false,
 }: DownloadButtonProps) {
   return (
     <a
-      className={`download-button download-button--${variant} ${className}`}
-      href={fileUrl}
-      download={filename}
+      className={`download-button download-button--${variant} ${disabled ? 'download-button--disabled' : ''} ${className}`}
+      href={disabled ? undefined : fileUrl}
+      download={disabled ? undefined : filename}
       aria-label={label}
+      aria-disabled={disabled}
+      tabIndex={disabled ? -1 : undefined}
+      onClick={(e) => {
+        if (disabled) e.preventDefault()
+      }}
       rel="noopener noreferrer"
     >
       <span className="download-button__label">{label}</span>
