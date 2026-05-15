@@ -42,7 +42,7 @@
     top: 34px;
     height: 28px;
     transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
-      flex: 1 1 0;
+      flex 1 1 0;
       padding: var(--spacing-lg);
 
         padding: var(--spacing-md) 20px;
