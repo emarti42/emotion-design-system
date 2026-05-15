@@ -76,6 +76,8 @@
   --color-success: var(--color-status-completed);
   --color-warning: var(--color-status-progress);
   --color-danger: var(--color-status-pending);
+
+  --dot-color: #d1d5db;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -86,6 +88,15 @@
     --color-text-body: #94a3b8;
     --color-border: rgba(255,255,255,0.06);
 
+    --n-100: #1a2537;
+    --n-200: #243047;
+    --n-300: #2e3d58;
+    --n-400: #4a5f7a;
+    --n-500: #7a90aa;
+    --n-700: #b0c4d8;
+    --n-900: #e8f0f8;
+
+    --dot-color: rgba(255, 255, 255, 0.18);
     --focus-ring: rgba(16,185,129,0.12);
   }
 }
@@ -100,6 +111,16 @@
   --color-text-body: #94a3b8;
   --color-border: rgba(255,255,255,0.06);
   --border-default: rgba(255,255,255,0.06);
+
+  --n-100: #1a2537;
+  --n-200: #243047;
+  --n-300: #2e3d58;
+  --n-400: #4a5f7a;
+  --n-500: #7a90aa;
+  --n-700: #b0c4d8;
+  --n-900: #e8f0f8;
+
+  --dot-color: rgba(255, 255, 255, 0.18);
   --focus-ring: rgba(16,185,129,0.12);
 }
 
@@ -110,6 +131,16 @@
   --color-text-body: #6b7280;
   --color-border: #e5e7eb;
   --border-default: #e5e7eb;
+
+  --n-100: #f3f4f6;
+  --n-200: #e5e7eb;
+  --n-300: #d1d5db;
+  --n-400: #9ca3af;
+  --n-500: #6b7280;
+  --n-700: #374151;
+  --n-900: #111827;
+
+  --dot-color: #d1d5db;
   --focus-ring: rgba(16,185,129,0.18);
 }
 
