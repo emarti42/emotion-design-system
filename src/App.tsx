@@ -1,7 +1,6 @@
 import heroImg from './assets/hero.png'
 import './App.css'
 import DownloadButton from './components/Atoms/DownloadButton/DownloadButton'
-import Card from './components/Molecules/Card/Card'
 import ThemeToggle from './components/Atoms/ThemeToggle/ThemeToggle'
 import Accordion from './components/Organisms/Accordion/Accordion'
 import Nav from './components/Organisms/Nav/Nav'
